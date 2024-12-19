@@ -4,12 +4,19 @@ import path from 'path';
 import matter from 'gray-matter';
 import { Problem } from '@/app/types/problem';
 
+type RouteParams = {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  routeParams: RouteParams
 ) {
   try {
-    const problemId = params.id;
+    const problemId = routeParams.params.id;
     
     // Build the file path
     const filePath = path.join(process.cwd(), 'app', 'problems', `${problemId}.md`);
