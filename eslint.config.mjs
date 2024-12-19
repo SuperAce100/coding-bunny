@@ -2,7 +2,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
 import nextEslintPlugin from '@next/eslint-plugin-next';
-import tseslint from 'typescript-eslint';
+import * as tseslint from 'typescript-eslint';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,18 +12,15 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", 
-    "next/typescript"
-    
-  ),
+  ...compat.extends("next/core-web-vitals"),
   {
+    files: ["**/*.ts", "**/*.tsx"],
+    ...tseslint.configs.recommended,
     plugins: {
-      '@next/next': nextEslintPlugin,
-      '@typescript-eslint': tseslint,
+      '@next/next': nextEslintPlugin
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',
-      // ... any other existing rules ...
     },
   },
 ];

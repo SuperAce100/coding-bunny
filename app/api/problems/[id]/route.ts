@@ -5,9 +5,9 @@ import matter from 'gray-matter';
 import { Problem } from '@/app/types/problem';
 
 export async function GET(
-  _request: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
-) {
+): Promise<NextResponse> {
   try {
     const problemId = params.id;
     
