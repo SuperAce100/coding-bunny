@@ -6,12 +6,9 @@ import { Problem } from '@/app/types/problem';
 
 export async function GET(
   request: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
   try {
-    // Get the problem ID from the URL
-    const params = await Promise.resolve(context.params);
-
     const problemId = params.id;
     
     // Build the file path
@@ -25,7 +22,8 @@ export async function GET(
       id: problemId,
       title: frontmatter.title,
       content,
-      dueDate: frontmatter.dueDate
+      dueDate: frontmatter.dueDate,
+      order: frontmatter.order || 0
     };
 
     return NextResponse.json(problem);
