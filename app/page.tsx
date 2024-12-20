@@ -55,7 +55,10 @@ export default function Home() {
                     }`}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <h2 className="text-xl font-semibold">{problem.title}</h2>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium text-pink-500 dark:text-pink-400">{problem.number}</span>
+                        <h2 className="text-xl font-semibold">{problem.title}</h2>
+                      </div>
                       <button
                         onClick={(e) => {
                           e.preventDefault();

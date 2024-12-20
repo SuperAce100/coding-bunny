@@ -1,6 +1,7 @@
 ---
 id: 1
 title: Getting around the terminal
+number: 1
 dueDate: 2024-12-20
 ---
 

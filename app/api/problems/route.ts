@@ -22,6 +22,7 @@ export async function GET() {
         
         return {
           id: filename.replace('.md', ''),
+          number: frontmatter.number,
           title: frontmatter.title,
           content,
           dueDate: frontmatter.dueDate

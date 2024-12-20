@@ -1,10 +1,10 @@
-export interface Problem {
+export type Problem = {
   id: string;
+  number: number;
   title: string;
-  content: string;
-  order: number;
   dueDate: string;
-}
+  order: number;
+};
 
 export interface ProblemWithCompletion extends Problem {
   completed: boolean;
