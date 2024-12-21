@@ -64,6 +64,8 @@ Don't worry too much about these, they'll be useful next lesson when we start st
 - `<div>`: division tag (used to group elements together)
 - `<span>`: inline container for text
 
+Here is the link to an awesome cheatsheet with a bunch of examples of tags and attributes: [HTML Cheatsheet](https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf)
+
 ## What you need to do
 
 We are going to create a simple website about **pompompurin!** On this website, we need to have a heading, a description of pompompurin, an a few images, and some interesting facts like his friends! Try to use as many of the tags we've learned as possible.

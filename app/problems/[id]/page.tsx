@@ -94,7 +94,7 @@ export default function ProblemPage({ params }: { params: { id: string } }) {
                       {String(children).replace(/\n$/, '')}
                     </SyntaxHighlighter>
                   ) : (
-                    <code {...rest} className={className}>
+                    <code {...rest} className={className + ' bg-gray-200 dark:bg-gray-700 p-1 rounded-md text-pink-600 dark:text-pink-400'}>
                       {String(children).replace(/^`|`$/g, '')}
                     </code>
                   )
@@ -108,15 +108,45 @@ export default function ProblemPage({ params }: { params: { id: string } }) {
                   }
                   return <p className="my-4 leading-relaxed">{children}</p>;
                 },
+                h1: ({ node, ...props }) => (
+                  <h1 className="text-4xl font-bold mt-8 mb-4" {...props} />
+                ),
                 h2: ({ node, ...props }) => (
                   <h2 className="text-2xl font-bold mt-8 mb-4" {...props} />
+                ),
+                h3: ({ node, ...props }) => (
+                  <h3 className="text-xl font-bold mt-8 mb-4" {...props} />
+                ),
+                h4: ({ node, ...props }) => (
+                  <h4 className="text-lg font-bold mt-8 mb-4" {...props} />
+                ),
+                h5: ({ node, ...props }) => (
+                  <h5 className="text-base font-bold mt-8 mb-4" {...props} />
+                ),
+                h6: ({ node, ...props }) => (
+                  <h6 className="text-sm font-bold mt-8 mb-4" {...props} />
                 ),
                 ul: ({ node, ...props }) => (
                   <ul className="list-disc list-inside my-4 space-y-2" {...props} />
                 ),
+                ol: ({ node, ...props }) => (
+                  <ol className="list-decimal list-inside my-4 space-y-2" {...props} />
+                ),
+                li: ({ node, ...props }) => (
+                  <li className="my-2" {...props} />
+                ),
+                blockquote: ({ node, ...props }) => (
+                  <blockquote className="my-4 pl-4 border-l-2 border-gray-300 dark:border-gray-600 pl-4 py-2" {...props} />
+                ),
                 strong: ({ node, ...props }) => (
                   <strong className="font-semibold" {...props} />
-                )
+                ),
+                em: ({ node, ...props }) => (
+                  <em className="italic" {...props} />
+                ),
+                a: ({ node, ...props }) => (
+                  <a className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300" {...props} />
+                ),
               }}
             >
               {problem.content}
