@@ -1,37 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coding Bunny 🐰
 
-## Getting Started
+A daily coding challenge platform where a friendly coding bunny delivers bite-sized programming problems each day. Built to help developers maintain consistent learning habits with an engaging, playful interface. Visit at [coding-bunny.vercel.app](https://coding-bunny.vercel.app).
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🎯 Daily coding challenges delivered by the coding bunny
+- ✨ Modern, responsive UI with smooth animations
+- ⏱️ Visual progress tracking for each problem
+- ✅ Problem completion tracking
+- 🌙 Dark/Light theme support
+- 🎨 Playful design with subtle interactions
+- 📝 Simple markdown-based problem management
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Implementation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core Technologies
+- **Next.js 13+** with App Router for modern web framework
+- **React 18** for interactive UI components
+- **TypeScript** for enhanced type safety and development experience
+- **Tailwind CSS** for responsive styling and dark mode support
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Content Management
+- Problems are managed through simple markdown files
+- Automatic problem ordering based on file names
+- No database or CMS required
+- Easy to add new problems by uploading markdown files
+- Supports code blocks, images, and rich formatting
 
-## Learn More
+### UI/UX Details
 
-To learn more about Next.js, take a look at the following resources:
+#### Design System
+- Custom color palette optimized for both light and dark modes
+- Gradient backgrounds with subtle blur effects
+- Responsive grid layout adapting to different screen sizes
+- Consistent spacing and typography system
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Interactive Elements
+- Animated icons and transitions
+- Progress bars with real-time updates
+- Hover effects and micro-interactions
+- Smooth theme transitions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Accessibility
+- Dark mode support with system preference detection
+- Optimized contrast ratios
+- Semantic HTML structure
+- Keyboard navigation support
 
-## Deploy on Vercel
+### Features Implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Problem Display
+- Latest problem highlighted prominently
+- Visual progress tracking for each problem
+- Completion status indicators
+- Due date countdown system
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# coding-bunny
+#### User Experience
+- Client-side state management for problem completion
+- Smooth animations and transitions
+- Responsive layout across devices
+- Intuitive navigation system
